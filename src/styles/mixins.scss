@@ -1,0 +1,13 @@
+@import 'variables.scss';
+
+@mixin phone { @media (max-width: #{$screen-phone}) {@content;} }
+@mixin tablet-portrait { @media (max-width: #{$screen-tablet-portrait}) {@content;} }
+@mixin tablet-portrait { @media (max-width: #{$screen-tablet-portrait}) {@content;} }
+@mixin desktop { @media (min-width: #{$screen-desktop}) {@content;} }
+@mixin large { @media (min-width: #{$screen-large}) {@content;} }
+@mixin font-roboto($size: false, $color: false, $weight: false) {
+  font-family: 'Montserrat', sans-serif;
+  @if $size { font-size: $size; }
+  @if $color { color: $color; }
+  @if $weight { font-weight: $weight; }
+}

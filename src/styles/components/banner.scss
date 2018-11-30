@@ -1,0 +1,9 @@
+.banner {
+  background-image: url('../images/macbook.jpg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+}

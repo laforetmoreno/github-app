@@ -1,0 +1,21 @@
+.container {
+  padding: 80px 0;
+
+  @include tablet-portrait {
+    padding: 40px 10px;
+  }
+
+  @include desktop {
+    padding: 40px 20px;
+  }
+
+  @include large {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 100px;
+  }
+
+  &.-green {
+    background: $light-green;
+  }
+}

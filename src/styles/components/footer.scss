@@ -1,0 +1,21 @@
+.footer {
+  padding: 60px 0;
+  background: $gray ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include tablet-portrait {
+    padding: 30px 0;
+  }
+
+  >.label {
+    color: $white;
+    font-size: 20px;
+
+    @include tablet-portrait {
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+}

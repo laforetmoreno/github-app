@@ -1,0 +1,22 @@
+.title {
+  font-size: 70px;
+  color: $white;
+  line-height: 1.5;
+  text-align: center;
+
+  @include tablet-portrait {
+    font-size: 36px;
+  }
+
+  &.-small {
+    font-size: 50px;
+
+    @include tablet-portrait {
+      font-size: 26px;
+    }
+  }
+
+  &.-black {
+    color: #000;
+  }
+}

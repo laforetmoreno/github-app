@@ -4,13 +4,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: __dirname + '/public',
+    path: path.resolve('dist'),
     filename: 'main.js'
-  },
-  devServer: {
-    inline: true,
-    contentBase: './public',
-    port: 3000
   },
   module: {
     rules: [
@@ -31,12 +26,22 @@ module.exports = {
             cacheDirectory: true
           }
         }
+      },
+      {
+        test: /\.(png|jpg)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: '../src/images/'
+          }
+        }
       }
     ]
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: "styles/[name].css"
-    }) 
+    })
   ]
 }

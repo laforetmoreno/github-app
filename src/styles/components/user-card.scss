@@ -1,0 +1,10 @@
+.user-card {
+  background: $white;
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+
+  @include tablet-portrait {
+    max-width: none;
+  }
+}

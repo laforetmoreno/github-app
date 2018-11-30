@@ -1,2 +1,13 @@
-body {
-}
+@import 'reset';
+@import 'colors';
+@import 'mixins';
+@import 'components/header';
+@import 'components/layout/container';
+@import 'components/banner';
+@import 'components/title';
+@import 'components/social-medias';
+@import 'components/paragraph';
+@import 'components/user-card';
+@import 'components/button';
+@import 'components/footer';
+
