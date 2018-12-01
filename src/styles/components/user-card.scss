@@ -3,8 +3,41 @@
   max-width: 60%;
   margin: 0 auto;
   padding: 20px;
+  display: flex;
+  margin-top: 20px;
 
   @include tablet-portrait {
     max-width: none;
+    flex-direction: column;
+  }
+
+  >.photo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    >.photo {
+      border-radius: 90px;
+      width: 175px;
+    }
+
+    >.link {
+      color: $black;
+      text-transform: uppercase;
+      margin-top: 20px;
+    }
+  }
+
+  >.github-infos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    @include tablet-portrait {
+      margin-top: 20px;
+    }
   }
 }

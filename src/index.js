@@ -1,34 +1,28 @@
-import user from './services/services';
+import url from './config/urls';
+import renderListTemplate from './view/renderListTemplate';
+import renderCard from './view/renderCard';
+import request from './services/request';
+
 import './styles/main.scss';
 
-async function renderSeguidores() {
-  const data = await user.getUser();
-  console.log(data);
+const makeCard = async () => {
+  const results = await request(url.user);
 
-  const newElement = document.createElement('p');
-  const value = document.createTextNode(`Seguidores ${data.followers}`);
-
-  newElement.appendChild(value);
-
-  const jj = document.getElementById('teste');
-
-  jj.appendChild(newElement);
+  renderCard(results)
 }
-// async function nata() {
-//   const data = await nada();
 
-//   const newElement = document.createElement('p');
-//   const value = document.createTextNode(data.url);
+const makeReposContainer = async () => {
+  const results = await request(url.repos)
+  
+  renderListTemplate(results);
+}
 
-//   newElement.appendChild(value);
+const makeSubscriptionsContainer = async () => {
+  const results = await request(url.subscriptions)
+  
+  renderListTemplate(results);
+}
 
-//   const jj = document.getElementById('teste');
-
-//   jj.appendChild(newElement);
-
-//   // console.log(data.url)
-// }
-
-renderSeguidores()
-// const data = user.getUser();
-// console.log(user.getUser(), 'ta foda')
+window.addEventListener("load", makeCard(), makeReposContainer());
+document.getElementById("ctaRepos").addEventListener("click", makeReposContainer);
+document.getElementById("ctaSubscriptions").addEventListener("click", makeSubscriptionsContainer);

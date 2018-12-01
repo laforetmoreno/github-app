@@ -15,7 +15,8 @@
     padding: 100px;
   }
 
-  &.-green {
+  &.--green {
     background: $light-green;
+    text-align: center;
   }
 }

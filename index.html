@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 <head>
   <title>Desafio frontend Qconcursos</title>
   <meta charset="utf-8">
@@ -8,7 +7,6 @@
   <link rel="stylesheet" href="styles/main.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,700" rel="stylesheet">
 </head>
-
 <body>
   <div class="" id="root">
     <section class="banner">
@@ -22,33 +20,35 @@
       </header>
       <div>
         <h1 class="title">Desenvolvedor Front End</h1>
-        <h2 class="title -small">Desafio Qconcursos.com</h2>
+        <h2 class="title --small">Desafio Qconcursos.com</h2>
       </div>
-      <div class="social-medias -center">
-        <img class="icon" src="./src/images/icon_facebook.png" />
-        <img class="icon" src="./src/images/icon_linkedin.png" />
-        <img class="icon" src="./src/images/icon_github.png" />
+      <div class="social-medias --center">
+        <a class="icon" href="https://www.facebook.com/mmorenolaforet" target="_blank">
+          <img src="./src/images/icon_facebook.png" />
+        </a>
+        <a class="icon" href="https://www.linkedin.com/in/moreno-andrade-1868b7120/" target="_blank">
+          <img class="icon" src="./src/images/icon_linkedin.png" />
+        </a>
+        <a class="icon" href="https://github.com/morenopereira" target="_blank">
+          <img src="./src/images/icon_github.png" />
+        </a>
       </div>
     </section>
-    <section class="container">
-      <h2 class="title -small -black">Sobre</h2>
+    <section id="about" class="container">
+      <h2 class="title --small --black">Sobre</h2>
       <p class="paragraph">Olá, meu nome é Moreno Andrade</p>
-      <p class="paragraph">Sou desenvolvedor de software e atualmente trabalho no Hotel Urbano. Curso faculdade de sistemas de informação na universidade Estácio de Sá, Ead.</p>
+      <p class="paragraph">Sou desenvolvedor de software e atualmente trabalho no Hotel Urbano. Curso faculdade de sistemas de informação
+        na universidade Estácio de Sá, Ead.</p>
       <p class="paragraph">Iniciei minha carreira a pouco mais de um ano e meio como estágiario na empresa Huge Inc.</p>
       <p class="paragraph">Gosto de estudar e jogar futebol nas horas vagas. Sempre que posso também gosto muito de viajar.</p>
     </section>
-    <section class="container -green">
-      <h2 class="title -small -black">Desafio</h2>
-      <div class="user-card">
-        <button class="button -green" id="btn">Ver repositorios</button>
-        <button class="button -green">Ver favoritos</button>
-        <div id="teste">
-            
-        </div>
-        <div id="teste1">
-            
-          </div>
-      </div>
+    <section id="challenge" class="container --green">
+      <h2 class="title --small --black">Desafio</h2>
+    </section>
+    <section class="container --green">
+      <button class="button --white" id="ctaRepos">Ver repositorios</button>
+      <button class="button --white" id="ctaSubscriptions">Ver favoritos</button>
+      <div class="info-repos" id="infos"></div>
     </section>
     <footer id="footer" class="footer">
       <strong class="label">Desafio desenvolvedor front end Qconcursos.com</strong>
