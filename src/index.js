@@ -5,6 +5,8 @@ import request from './services/request';
 
 import './styles/main.scss';
 
+const p = document.getElementById('titleInfos');
+
 const makeCard = async () => {
   const results = await request(url.user);
 
@@ -12,14 +14,16 @@ const makeCard = async () => {
 }
 
 const makeReposContainer = async () => {
+  p.textContent = 'Repositórios';
   const results = await request(url.repos)
   
   renderListTemplate(results);
 }
 
 const makeSubscriptionsContainer = async () => {
+  p.textContent = 'Repositórios favoritos';
   const results = await request(url.subscriptions)
-  
+
   renderListTemplate(results);
 }
 
