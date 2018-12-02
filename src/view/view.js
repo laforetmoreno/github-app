@@ -1,4 +1,15 @@
-function renderCard(data) {
+export const renderListTemplate = data => {
+  const container = document.getElementById("infos");
+  const html = `
+    <ul class="list">
+      ${data.reduce((html, items) => html + `<li class="item">${items.name}</li>`, '')}
+    </ul>
+  `;
+
+  container.innerHTML = html;
+}
+
+export const renderCard = data => {
   const container = document.getElementById('challenge');
   const html = `
       <div class="photo-container">
@@ -12,7 +23,5 @@ function renderCard(data) {
       </div>
   `;
   
-  container.insertAdjacentHTML('beforeend', `<div class="user-card">${html}</div>`)
+  container.insertAdjacentHTML('beforeend', `<div class="user-card">${html}</div>`);
 }
-
-export default renderCard;

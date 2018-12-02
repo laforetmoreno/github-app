@@ -1,28 +1,26 @@
-import url from './config/urls';
-import renderListTemplate from './view/renderListTemplate';
-import renderCard from './view/renderCard';
-import request from './services/request';
+import { getUserData, getRepos, getSubscriptions } from './services/services';
+import { renderListTemplate, renderCard } from './view/view';
 
 import './styles/main.scss';
 
 const p = document.getElementById('titleInfos');
 
 const makeCard = async () => {
-  const results = await request(url.user);
+  const results = await getUserData();
 
   renderCard(results)
 }
 
 const makeReposContainer = async () => {
   p.textContent = 'Repositórios';
-  const results = await request(url.repos)
+  const results = await getRepos();
   
   renderListTemplate(results);
 }
 
 const makeSubscriptionsContainer = async () => {
   p.textContent = 'Repositórios favoritos';
-  const results = await request(url.subscriptions)
+  const results = await getSubscriptions();
 
   renderListTemplate(results);
 }
